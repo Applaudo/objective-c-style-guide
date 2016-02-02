@@ -1,4 +1,4 @@
-# Objective-C Style Guide
+# Applaudo Objective-C Style Guide
 
 ## Introduction
 
