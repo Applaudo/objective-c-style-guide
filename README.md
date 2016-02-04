@@ -37,48 +37,75 @@ Here are some of the documents from Apple that informed the style guide. If some
 ```objc
 #pragma mark - Class Methods
 + (instancetype)sharedInstance {
-    ....
+    ...
 }
 
 #pragma mark - Lifecycle
 
-- (instancetype)init {}
-- (void)dealloc {}
+- (instancetype)init {
+    ...
+}
+- (void)dealloc {
+    ...
+}
 
 // If this object conforms to NSCopying
 #pragma mark - NSCopying
 
-- (id)copyWithZone:(NSZone *)zone {}
+- (id)copyWithZone:(NSZone *)zone {
+    ...
+}
 
 // If this overrides `NSObject`'s `description` method
 #pragma mark - NSObject
 
-- (NSString *)description {}
+- (NSString *)description {
+    ...
+}
 
 // If this object is a UIViewController subclass
 #pragma mark - View Lifecycle
 
-- (void)viewDidLoad {}
-- (void)viewWillAppear:(BOOL)animated {}
-- (void)didReceiveMemoryWarning {}
+- (void)viewDidLoad {
+    ...
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    ...
+}
+
+- (void)didReceiveMemoryWarning {
+    ...
+}
 
 #pragma mark - Overriding Methods
 
-- (void)setParentProperty:(id)value {}
-- (id)parentProperty {}
+- (void)setParentProperty:(id)value {
+    ...
+}
+
+- (id)parentProperty {
+    ...
+}
 
 // If this is a `UIView` subclass
 #pragma mark - Views
 
-- (UIView *)lazyLoadedView {}
+- (UIView *)lazyLoadedView {
+    ...
+}
 
 #pragma mark - Public
 
-- (void)publicMethod {}
+- (void)publicMethod {
+    ...
+}
 
 #pragma mark - Private
 
-- (void)privateMethod {}
+- (void)privateMethod {
+    ...
+}
 
 #pragma mark - Protocols conformance
 #pragma mark - Pragma for each delegate
