@@ -995,7 +995,8 @@ Where class constructor methods are used, these should always return type of 'in
 
 ## Constants
 
-Avoid magic numbers with no meaning, preferring instead a named variable or constant (see following examples).
+- Avoid declaring constants inside ProjectName-Prefix.pch file.
+- Avoid magic numbers with no meaning, preferring instead a named variable or constant (see following examples).
 
 ### Integers
 
