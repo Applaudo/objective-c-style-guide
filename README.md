@@ -1,4 +1,4 @@
-# Applaudo Objective-C Style Guide
+# Objective-C Style Guide
 
 ## Introduction
 
@@ -112,7 +112,7 @@ else {
 ### Line Break and Whitespace
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization.
-* Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods).
+* Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). 
 * `@synthesize` and `@dynamic` should each be declared on new lines in the implementation.
 * Separate imports from the rest of your file by 1 space. Optionally group imports if there are many (but try to have less dependencies). Generally strive to include frameworks first.
 
@@ -812,7 +812,6 @@ typedef NS_OPTIONS(NSUInteger, ABCCategory) {
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
 + (instancetype)sharedInstance {
-
   static id sharedInstance = nil;
 
   static dispatch_once_t onceToken;
@@ -1023,9 +1022,10 @@ When you need a library, first look for it in cocoapods. if you can not find it,
 
 ## Recommendations
 
-* Read about [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
-* Read about [MVVM](https://www.objc.io/issues/13-architecture/mvvm/)
-* Use [Dash](https://itunes.apple.com/us/app/dash-3-api-docs-snippets./id449589707?mt=12) for your snippets
+* Read about [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)).
+* Read about [MVVM](https://www.objc.io/issues/13-architecture/mvvm/).
+* Use [Dash](https://itunes.apple.com/us/app/dash-3-api-docs-snippets./id449589707?mt=12) for your snippets.
+* Use [BBUncrustifyPlugin-Xcode](https://github.com/benoitsan/BBUncrustifyPlugin-Xcode) to help format your code with [uncrustify.cfg](/uncrustify.cfg) configuration file.
 
 # Other Objective-C Style Guides
 
