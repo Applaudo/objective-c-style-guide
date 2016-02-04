@@ -35,7 +35,11 @@ Here are some of the documents from Apple that informed the style guide. If some
 * Use `#pragma mark -` to categorize methods in functional groupings and protocol/delegate implementations following this general structure.
 
 ```objc
-#pragma mark - Static Methods
+#pragma mark - Class Methods
++ (instancetype)sharedInstance {
+    ....
+}
+
 #pragma mark - Lifecycle
 
 - (instancetype)init {}
