@@ -36,6 +36,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 
 ```objc
 #pragma mark - Class Methods
+
 + (instancetype)sharedInstance {
     ...
 }
@@ -226,20 +227,16 @@ if (alpha + beta <= 0) && (kappa + phi > 0) {
 
 ```objc
 - (void)awakeFromNib {
-    UIStoryboard *signatureStoryboard                   = [UIStoryboard storyboardWithName:@"ABCPopoverSignature" bundle:nil];
-    self.signatureViewController                        = [signatureStoryboard instantiateViewControllerWithIdentifier:@"ABCPopoverSignature"];
+    UIStoryboard *signatureStoryboard = [UIStoryboard storyboardWithName:@"ABCPopoverSignature" bundle:nil];
+    self.signatureViewController = [signatureStoryboard instantiateViewControllerWithIdentifier:@"ABCPopoverSignature"];
     self.signatureViewController.modalPresentationStyle = UIModalPresentationPopover;
-    self.signatureViewController.preferredContentSize   = CGSizeMake(ABCPopoverSignatureWidth, ABCPopoverSignatureHeight);
-    self.signatureViewController.signatureImageView     = self;
+    self.signatureViewController.preferredContentSize = CGSizeMake(ABCPopoverSignatureWidth, ABCPopoverSignatureHeight);
+    self.signatureViewController.signatureImageView = self;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(initiateSignatureCapture)];
     [self addGestureRecognizer:tapRecognizer];
 }
 ```
-
-### Alignment
-
-* Align "=" signs within the same code block
 
 ## Naming
 
@@ -416,7 +413,31 @@ Methods and properties added in categories should be named with an app- or organ
 
 - Don't use `id` is prefer `uid`, do not use any reserved words as property names on an object.
 - Don't use `description` is prefer `about`, `description` is method of NSObject. All classes that inherit from NSObject inherit the method. It produces a textual description of the object for debugging purposes. 
+- To name IBOutlets properties don't forget to sufix with same kind of class.
 
+**Example:**
+
+```objc
+@interface ABCRepository ()
+
+@property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIWebView *mainWebView;
+
+@end
+```
+
+**Not:**
+
+```objc
+@interface ABCRepository ()
+
+@property (nonatomic, strong) UIView *header;
+@property (nonatomic, strong) UILabel *title;
+@property (nonatomic, strong) UIWebView *main;
+
+@end
+```
 
 ## Properties
 
