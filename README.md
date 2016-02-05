@@ -109,6 +109,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 }
 
 #pragma mark - Protocols conformance
+
 #pragma mark - Pragma for each delegate
 ```
 
@@ -744,10 +745,10 @@ This helps disambiguate in cases when an object is the delegate for multiple sim
 **Example:**
 
 ```objc
-NSArray *names                = @[@"Brian", @"Matt", @"Chris", @"Alex", @"Steve", @"Paul"];
+NSArray *names = @[@"Brian", @"Matt", @"Chris", @"Alex", @"Steve", @"Paul"];
 NSDictionary *productManagers = @{@"iPhone" : @"Kate", @"iPad" : @"Kamal", @"Mobile Web" : @"Bill"};
-NSNumber *shouldUseLiterals   = @YES;
-NSNumber *buildingZIPCode     = @10018;
+NSNumber *shouldUseLiterals = @YES;
+NSNumber *buildingZIPCode = @10018;
 ```
 
 **Not:**
@@ -770,9 +771,9 @@ When accessing the `x`, `y`, `width`, or `height` of a `CGRect`, always use the 
 ```objc
 CGRect frame = self.view.frame;
 
-CGFloat x      = CGRectGetMinX(frame);
-CGFloat y      = CGRectGetMinY(frame);
-CGFloat width  = CGRectGetWidth(frame);
+CGFloat x = CGRectGetMinX(frame);
+CGFloat y = CGRectGetMinY(frame);
+CGFloat width = CGRectGetWidth(frame);
 CGFloat height = CGRectGetHeight(frame);
 ```
 
@@ -830,8 +831,8 @@ typedef NS_ENUM(NSInteger, ABCUserState) {
 //You can also make explicit value assignments (showing older k-style constant definition):
 
 typedef NS_ENUM(NSInteger, ABCGlobalConstants) {
-  ABCPinSizeMin  = 1,
-  ABCPinSizeMax  = 5,
+  ABCPinSizeMin = 1,
+  ABCPinSizeMax = 5,
   ABCPinCountMin = 100,
   ABCPinCountMax = 500,
 };
@@ -852,10 +853,10 @@ When working with bitmasks, use the `NS_OPTIONS` macro.
 
 ```objc
 typedef NS_OPTIONS(NSUInteger, ABCCategory) {
-    ABCCategoryFootwears    = 1 << 0,
-    ABCCategoryHandbags     = 1 << 1,
-    ABCCategoryAccessories  = 1 << 2,
-    ABCCategoryRandom       = 1 << 3
+    ABCCategoryFootwears = 1 << 0,
+    ABCCategoryHandbags = 1 << 1,
+    ABCCategoryAccessories = 1 << 2,
+    ABCCategoryRandom = 1 << 3
 };
 ```
 
@@ -935,8 +936,7 @@ Create documentation of the different classes in its .h files
  
  @return The sum of the two numbers passed in.
  */
-+ (NSInteger)addNumber:(NSInteger)firstNumber 
-              toNumber:(NSInteger)secondNumber;
++ (NSInteger)addNumber:(NSInteger)firstNumber toNumber:(NSInteger)secondNumber;
 
 ```
 >Check out the [HeaderDoc Tags](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/tags/tags.html#//apple_ref/doc/uid/TP40001215-CH346-CHDJFEGF)
